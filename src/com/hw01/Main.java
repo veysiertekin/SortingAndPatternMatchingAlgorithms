@@ -1,4 +1,4 @@
-package com.sorting;
+package com.hw01;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,11 +8,11 @@ import org.junit.runner.JUnitCore;
 
 public class Main {
 	public static void main(String[] args) throws FileNotFoundException {
-		PrintWriter print = new PrintWriter(System.getProperty("user.home") + File.separator + "Desktop" + File.separator + "x.csv");
+		PrintWriter print = new PrintWriter(System.getProperty("user.home") + File.separator + "Desktop" + File.separator + "x.txt");
 		TestCase.SIZE = 1;
 		String line = "";
 
-		int repeat = 7;
+		int repeat = 1;
 
 		for (int i = 0; i < repeat; i++) {
 			JUnitCore.runClasses(TestCase.class);

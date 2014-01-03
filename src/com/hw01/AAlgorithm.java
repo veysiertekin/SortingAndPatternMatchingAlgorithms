@@ -1,4 +1,4 @@
-package com.sorting;
+package com.hw01;
 public abstract class AAlgorithm {
 	public abstract Integer[] sort(Integer[] array);
 

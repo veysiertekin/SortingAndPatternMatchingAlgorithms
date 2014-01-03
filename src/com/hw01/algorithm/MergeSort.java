@@ -1,5 +1,5 @@
-package com.sorting.algorithm;
-import com.sorting.AAlgorithm;
+package com.hw01.algorithm;
+import com.hw01.AAlgorithm;
 
 public class MergeSort extends AAlgorithm {
 	private Integer[] numbers;
