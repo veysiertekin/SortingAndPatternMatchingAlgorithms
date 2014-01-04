@@ -29,16 +29,6 @@ public class Horspool extends AAlgorithm {
 		return text.length;
 	}
 
-	public int getCharIndex(char i) {
-		int j = 0;
-		for (char ch : ALPHABET) {
-			if (ch == i)
-				return j;
-			j++;
-		}
-		return -1;
-	}
-
 	public void prepareTable(char[] pattern) {
 		for (int i = 0; i < shiftTable.length; i++) {
 			shiftTable[i] = pattern.length;
@@ -48,15 +38,21 @@ public class Horspool extends AAlgorithm {
 		}
 	}
 
-	// if 'c' exist (but not last char) in pattern get index of right most character,
-	// unless assign lenght of pattern to all characters
 	private Integer shiftCount(char c, char[] pattern) {
 		for (int i = pattern.length - 2/* ignore last char of pattern */; i >= 0; i--) {
-			// rightMostIndex
 			if (pattern[i] == c)
 				return pattern.length - 1 - i; // m-1-n
 		}
-		// if doesn't match of any character in pattern return lenght of pattern
 		return pattern.length;
+	}
+
+	public int getCharIndex(char i) {
+		int j = 0;
+		for (char ch : ALPHABET) {
+			if (ch == i)
+				return j;
+			j++;
+		}
+		return -1;
 	}
 }
