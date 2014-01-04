@@ -6,10 +6,8 @@ public class BruteForce extends AAlgorithm {
 
 	@Override
 	public int sort(char[] text, char[] pattern) {
-		int M = pattern.length;
-		int N = text.length;
 		int i, j;
-		for (i = 0, j = 0; i < N && j < M; i++) {
+		for (i = 0, j = 0; i < text.length && j < pattern.length; i++) {
 			if (text[i] == pattern[j])
 				j++;
 			else {
@@ -17,10 +15,10 @@ public class BruteForce extends AAlgorithm {
 				j = 0;
 			}
 		}
-		if (j == M)
-			return i - M;
+		if (j == pattern.length)
+			return i - pattern.length;
 		else
-			return N;
+			return text.length;
 	}
 
 }
