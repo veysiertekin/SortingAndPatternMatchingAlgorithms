@@ -26,7 +26,7 @@ public class Horspool extends AAlgorithm {
 			return k + 1;
 		}
 
-		return text.length;
+		return -1;
 	}
 
 	public void prepareTable(char[] pattern) {

@@ -23,6 +23,7 @@ public class TestCase {
 	@Before
 	public void setUp() throws Exception {
 		algorithm = createObject(Class.forName("com.hw02.algorithm." + name.getMethodName()));
+
 		start = System.nanoTime();
 	}
 
@@ -43,7 +44,12 @@ public class TestCase {
 	}
 
 	private void exec() {
-		map.put(name.getMethodName() + "_INDEX", Double.valueOf(algorithm.sort(text, pattern)));
+		try {
+			map.put(name.getMethodName() + "_INDEX", Double.valueOf(algorithm.sort(text, pattern)));
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static AAlgorithm createObject(Class<?> klass) {
