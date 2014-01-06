@@ -18,7 +18,7 @@ public class BruteForce extends AAlgorithm {
 		if (j == pattern.length)
 			return i - pattern.length;
 		else
-			return text.length;
+			return -1;
 	}
 
 }

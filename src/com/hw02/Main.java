@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.security.SecureRandom;
+import java.util.Arrays;
 
 import org.junit.runner.JUnitCore;
 
@@ -13,18 +14,25 @@ public class Main {
 	private static SecureRandom random = new SecureRandom();
 
 	public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
-		int textSize = 10000000;
-		int patternSize = 3;
+		int patternSize = 1;
+		final int textSize = 10000000;
+		final int MAX_PATTERN_SIZE = 100;
 
-		final int MAX_PATTERN_SIZE = 15;
+		int startIndex;
+		char line = '\0';
 
 		StringBuilder builder = new StringBuilder();
+
+		TestCase.text = generateArray(textSize);
+
 		for (; patternSize <= MAX_PATTERN_SIZE; patternSize++) {
-			TestCase.text = generateArray(textSize);
-			TestCase.pattern = generateArray(patternSize);
+			startIndex = (TestCase.text.length / 4) * 3 + random.nextInt((TestCase.text.length / 4) - patternSize);
+			TestCase.pattern = Arrays.copyOfRange(TestCase.text, startIndex, startIndex + patternSize);
 
 			JUnitCore.runClasses(TestCase.class);
 
+			if (line == '\n')
+				builder.append(line);
 			builder.append(textSize);
 			builder.append('\t');
 			builder.append(patternSize);
@@ -36,8 +44,8 @@ public class Main {
 			builder.append(TestCase.map.get("Horspool_INDEX").intValue());
 			builder.append('\t');
 			builder.append(TestCase.map.get("Horspool"));
-			builder.append("\n");
-			
+			line = '\n';
+
 			TestCase.map.clear();
 			System.gc();
 		}
