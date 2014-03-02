@@ -1,12 +1,12 @@
 package com.hw02;
 
 public abstract class AAlgorithm {
-	public static final char[] ALPHABET = "abcçdefgðhýijklmnoöprsþtuüvyz".toCharArray();
+	public static final char[] ALPHABET = "abcï¿½defgï¿½hï¿½ijklmnoï¿½prsï¿½tuï¿½vyz".toCharArray();
 
 	/**
 	 * @param text
 	 * @param pattern
 	 * @return index of location find
 	 */
-	public abstract int sort(char[] text, char[] pattern);
+	public abstract int find(char[] text, char[] pattern);
 }
