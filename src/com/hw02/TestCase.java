@@ -45,7 +45,7 @@ public class TestCase {
 
 	private void exec() {
 		try {
-			map.put(name.getMethodName() + "_INDEX", Double.valueOf(algorithm.sort(text, pattern)));
+			map.put(name.getMethodName() + "_INDEX", Double.valueOf(algorithm.find(text, pattern)));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
