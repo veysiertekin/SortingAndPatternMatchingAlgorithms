@@ -1,7 +1,7 @@
 package com.hw02;
 
 public abstract class AAlgorithm {
-	public static final char[] ALPHABET = "abc�defg�h�ijklmno�prs�tu�vyz".toCharArray();
+	public static final char[] ALPHABET = "abcdefghijklmnoprstuvyz".toCharArray();
 
 	/**
 	 * @param text
