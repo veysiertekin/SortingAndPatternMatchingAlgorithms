@@ -5,7 +5,7 @@ import com.hw02.AAlgorithm;
 public class BruteForce extends AAlgorithm {
 
 	@Override
-	public int sort(char[] text, char[] pattern) {
+	public int find(char[] text, char[] pattern) {
 		int i, j;
 		for (i = 0, j = 0; i < text.length && j < pattern.length; i++) {
 			if (text[i] == pattern[j])
