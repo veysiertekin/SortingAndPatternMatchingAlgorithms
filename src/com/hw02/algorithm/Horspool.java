@@ -6,7 +6,7 @@ public class Horspool extends AAlgorithm {
 	private static int[] shiftTable = new int[ALPHABET.length];
 
 	@Override
-	public int sort(char[] text, char[] pattern) {
+	public int find(char[] text, char[] pattern) {
 		prepareTable(pattern);
 
 		// start with lenght of pattern
