@@ -13,4 +13,4 @@ SortingAndPatternMatchingAlgorithms
 * Brute Force
 * Horspool
 
-One each of (1) and (2), also has an test case that measure performance of algortihms.
+One each of (1) and (2), also has a test case that measure performance of algortihms.
