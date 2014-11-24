@@ -1,9 +1,7 @@
 SortingAndPatternMatchingAlgorithms
 =================
 
-Includes sorting/finding algorithms and a test case for each project ("Main.java" tests their execution time by increased item size via mentioned those test cases).
-
-Sorting Algorithms:
+(1)Sorting Algorithms:
 * Bubblesort
 * Heapsort
 * Insertionsort
@@ -11,6 +9,8 @@ Sorting Algorithms:
 * Quicksort
 * Selectionsort
 
-Pattern Matching Algorithms:
+(2)Pattern Matching Algorithms:
 * Brute Force
 * Horspool
+
+One each of (1) and (2), also has an test case that measure performance of algortihms.
